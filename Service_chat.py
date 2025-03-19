@@ -14,3 +14,4 @@ response = llm.invoke([
     HumanMessage(content="请问你是chatgpt几")
 ])
 print(response.content)
+
