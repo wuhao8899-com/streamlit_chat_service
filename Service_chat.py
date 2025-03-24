@@ -8,7 +8,7 @@ llm = ChatOpenAI(
     openai_api_base="https://api.gptsapi.net/v1",  # 自定义 API 地址
     model_name='gpt-4'  # 根据你的服务商支持的模型名称调整
 )
-
+print(llm)
 
 response = llm.invoke([
     HumanMessage(content="请问你是chatgpt几")
