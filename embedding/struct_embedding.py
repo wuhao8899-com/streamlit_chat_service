@@ -61,7 +61,7 @@ for doc in document_tab:
 # 构建向量数据库
 embedding = ZhipuAIEmbeddings()
 vectordb = Chroma.from_documents(
-    documents=split_docs_tab[:100], # 为了速度，只选择前 20 个切分的 doc 进行生成；使用千帆时因QPS限制，建议选择前 5 个doc
+    documents=split_docs_tab, # 为了速度，只选择前 20 个切分的 doc 进行生成；使用千帆时因QPS限制，建议选择前 5 个doc
     embedding=embedding,
     persist_directory=persist_directory  # 允许我们将persist_directory目录保存到磁盘上
 )
